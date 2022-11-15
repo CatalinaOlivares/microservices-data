@@ -1,2 +1,0 @@
-# microservices-data
-config-data
