@@ -9,6 +9,7 @@ eureka:
       default-zone: http://localhost:8761/eureka
   instance:
     hostname: localhost
+
 spring:
   cloud:
     gateway:
@@ -20,10 +21,11 @@ spring:
       globalcors:
         cors-configurations:
           '[/**]':
-            allowed-origin-patterns: '*'
-            allowed-methods: "*"
-            allowed-headers: "*"
-            allow-credentials: true
+            allowedOrigins: "http://localhost:3002"
+            allowedHeaders: "*"
+            allowedMethods:
+              - GET
+              - POST
       routes:
         - id: empleado-service
           uri: lb://empleado-service
