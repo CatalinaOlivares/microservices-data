@@ -13,3 +13,6 @@ management:
     web:
       exposure:
         include: "*"
+exposure:
+  include:
+    - prometheus
